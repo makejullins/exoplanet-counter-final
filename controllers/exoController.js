@@ -1,4 +1,4 @@
-const exoplanetController = require("../models/exoplanets");
+const exoplanetController = require("../models/exoplanet");
 
 exports.index = function(req, res) {
     const currentCount = 4438;
