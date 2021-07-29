@@ -1,7 +1,12 @@
 extends layout 
 
 block content 
+    // totalCount is all planets
+    // sinceCount is how many planets have been discovered since
+    // the site went live
     p There have been
-    h1 #{count}
-    p Exoplanets discovered
-    
+    h1 #{totalCount}
+    p Exoplanets discovered.
+    p Since this website went live on August 4th, 2021,
+    h1 #{totalCount - 4438}
+    p Exoplanets have been discovered.
