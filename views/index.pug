@@ -1,6 +1,14 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
-  a(href='/counter') Realtime Exoplanet Counter
+doctype html
+// If you're sneaking in here to check out my HTML code
+// I suggest you go to a different page
+html
+  head 
+    meta(charset UTF-8)/
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1= title
+    p Welcome to #{title}
+    a(href='/counter')  Realtime Exoplanet Counter
+    br
+    a(href='/aboutme') About Me

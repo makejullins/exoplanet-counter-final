@@ -11,4 +11,8 @@ router.get("/", function(req, res, next) {
 
 router.get("/counter", exoController.index);
 
+router.get("/aboutme", function(req, res, next) {
+    res.render("aboutme");
+});
+
 module.exports = router;
