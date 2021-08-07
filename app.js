@@ -11,6 +11,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// Set up mongoose
+var mongoose = require('mongoose');
+const MongoDB = 'mongodb +srv://exoplanetCounter:viF6j2viGokBC8ck@exoplanetnames.nu20q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

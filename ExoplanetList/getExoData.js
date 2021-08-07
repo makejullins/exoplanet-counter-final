@@ -1,7 +1,6 @@
 // Libs
 const wget = require("wget-improved");
 const fs = require("fs");
-const async = require("async");
 
 // Dependencies
 // const uploadToMongo = require('./uploadToMongo.js');
