@@ -1,12 +1,15 @@
-var exoplanetCount = require('../ExoplanetCounter/countExoplanets');
+var exoplanetCount = require("../ExoplanetCounter/countExoplanets");
+var Exoplanet = require("../models/exoplanet");
 
 exports.index = function(req, res) {
-    const currentCount = exoplanetCount.exoplanetCount;
-    console.log(currentCount);
-    // Modify this to change counter page
-    res.render("counter", {
-        totalCount: currentCount,
-        // How many have been discovered since site went live
-        sinceCount: currentCount - 4438,
+    Exoplanet.countDocuments({}, function(err, currentCount) {
+
+        console.log(currentCount);
+        // Modify this to change counter page
+        res.render("counter", {
+            totalCount: currentCount,
+            // How many have been discovered since site went live
+            sinceCount: currentCount - 4438,
+        });
     });
 };
