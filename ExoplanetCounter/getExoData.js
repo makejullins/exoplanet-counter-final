@@ -16,23 +16,23 @@ module.exports = function() {
     const outputFileString = __dirname + "/exoplanetJSON.json";
 
     // If file exists, delete then
-    console.log("Checking for file");
+    //console.log("Checking for file");
     if (fs.existsSync(outputFileString)) {
-        console.log("File exists");
+        //console.log("File exists");
         fs.unlinkSync(outputFileString);
-        console.log("File deleted");
+        //console.log("File deleted");
     } else {
         console.log("File does not exist");
     }
 
-    // Wget call, then waits for 5 seconds to make sure 
+    // Wget call, then waits for 8 seconds to make sure 
     // that the data is downloaded.
     const WAIT_TIME = 8000;
 
-    console.log("Starting download, this might take a while");
+    //console.log("Starting download, this might take a while");
     wget.download(src, outputFileString);
 
     setTimeout(() => {
-        console.log("Done downloading");
+        //console.log("Done downloading");
     }, WAIT_TIME);
 };
