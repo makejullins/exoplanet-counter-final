@@ -3,7 +3,7 @@ const fs = require("fs");
 
 // Dependencies
 const Exoplanet = require("../models/exoplanet.js");
-const dataPath = __dirname + "\\exoplanetJSON.json";
+const dataPath = __dirname + "/exoplanetJSON.json";
 
 const mongoString =
     "mongodb+srv://exoplanetCounter:viF6j2viGokBC8ck@exoplanetnames.nu20q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
