@@ -1,10 +1,13 @@
 // dependencies
 const countExoplanets = require('./countExoplanets');
 
-const INTERVAL_TIME = 5 * 60 * 1000;
+const INTERVAL_TIME = 1 * 30 * 1000;
 
-countExoplanets.countExoplanets();
+module.exports = function() {
 
-setInterval(() => {
     countExoplanets.countExoplanets();
-}, INTERVAL_TIME);
+
+    setInterval(() => {
+        countExoplanets.countExoplanets();
+    }, INTERVAL_TIME);
+};

@@ -9,11 +9,14 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// Dependencies
+var persistent = require("./ExoplanetCounter/persistent");
+
 var app = express();
 
 // Set up mongoose
 var mongoose = require('mongoose');
-const MongoDB = 'mongodb +srv://exoplanetCounter:viF6j2viGokBC8ck@exoplanetnames.nu20q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const MongoDB = 'mongodb+srv://exoplanetCounter:viF6j2viGokBC8ck@exoplanetnames.nu20q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
 mongoose.connect(MongoDB, {
     useNewUrlParser: true,
@@ -50,5 +53,14 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+/* 
+ * Does
+ * wget call from NASA API
+ * Uploads to MongoDB
+ * Counts exoplanet documents uploaded
+ * Stores number in a variable to be rendered
+ */
+persistent();
 
 module.exports = app;
