@@ -15,6 +15,13 @@ var app = express();
 var mongoose = require('mongoose');
 const MongoDB = 'mongodb +srv://exoplanetCounter:viF6j2viGokBC8ck@exoplanetnames.nu20q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
+mongoose.connect(MongoDB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB Connection error'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
