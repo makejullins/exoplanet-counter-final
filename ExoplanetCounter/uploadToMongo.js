@@ -5,9 +5,6 @@ const fs = require("fs");
 const Exoplanet = require("../models/exoplanet.js");
 const dataPath = __dirname + "/exoplanetJSON.json";
 
-const mongoString =
-    "mongodb+srv://exoplanetCounter:viF6j2viGokBC8ck@exoplanetnames.nu20q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
 module.exports = function() {
     // Signals start of function
     //console.log("Starting upload");
