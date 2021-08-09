@@ -6,7 +6,7 @@ const exoController = require("../controllers/exoController");
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-    res.render("index", { title: "Express" });
+    res.render("index", { title: "Jake Mullins' Portfolio" });
 });
 
 router.get("/counter", exoController.index);
