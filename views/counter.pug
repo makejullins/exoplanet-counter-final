@@ -13,3 +13,19 @@ block content
         span
             h1 #{totalCount - 4438}
         p Exoplanets have been discovered.
+    div(id=counterInfo)
+        h1 Counter Info
+        p I created this website from the ground up starting in June.
+        p The site works by downloading a JSON with all the known exoplanet names from NASA, found at this link:
+        a(href='https://exoplanetarchive.ipac.caltech.edu/') Exoplanet Archive.
+        p The program then parses the JSON and uploads it to MongoDB. This is done every five minutes or so.
+        p Every time you refresh the page, the program counts the number of Exoplanet objects in the database.
+        br
+        p In order to create this project, I had to learn 
+        ul
+            li Node.js 
+            li Express
+            li MongoDB and Mongoose
+            li Heroku
+            li Pug
+        p As of August 9th 2021, the site is now fully available to the public.
