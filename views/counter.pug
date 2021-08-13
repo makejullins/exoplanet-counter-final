@@ -1,32 +1,39 @@
 extends layout 
 
 block content 
-    div(id=counterDisplay) 
-
-        p Exoplanets are planets that have been detected <em>outside</em> of our solar system. The first exoplanets detected were two planets orbiting the pulsar 
-            | PSR B1257+12 in 1990 by Aleksandr Wolszczan. In 1992, Aleksandr Wolszczan and Dale Frail published a paper named <a href='https://ui.adsabs.harvard.edu/abs/1992Natur.355..145W/abstract'> A planetary system around the millisecond pulsar PSR1257 + 12 </a>
-            | . In 1994, one more planet was discovered. As of writing, that planet is the smallest exoplanet observed, at about 2% of Earth's mass. 
-    
+    #counterDisplay
         // totalCount is all planets
         // sinceCount is how many planets have been discovered since
         // the site went live
-        p There have been
-        span
-            h1 #{totalCount}
-        p Exoplanets discovered.
-        p Since this website went live on August 4th, 2021,
-        span
-            h1 #{totalCount - 4438}
-        p Exoplanets have been discovered.
-    lr
-    div(id=counterInfo)
-        h2 Counter Info
+        h1 #{totalCount}
+        p Exoplanets have been discovered. 
+        h1 #{totalCount - 4438}
+        p Exoplanets have been discovered since this website went live on August 4th, 2021,
+    
+    #exoplanetInfo
+        h1 What is an exoplanet?
+        h3 Exoplanets, or extrasolar planets are planets that have been detected <em>outside</em> of our solar system. 
+        p The first exoplanets detected were two planets orbiting the pulsar 
+            | PSR B1257+12 in 1990 by Aleksandr Wolszczan. In 1992, Aleksandr Wolszczan and Dale Frail published a paper named <a href='https://ui.adsabs.harvard.edu/abs/1992Natur.355..145W/abstract'> A planetary system around the millisecond pulsar PSR1257+12.</a>
+            | . In 1994, one more planet was discovered. As of writing, that planet is the smallest exoplanet observed, at about 2% of Earth's mass.
+        h1 How are exoplanets found?
+        h3 Radial Velocity Method 
+        p Using the Radial Velocity Method, astronomers check if a nearby large planet is "wobbling" its parent star.
+            | Researchers look for stars that are <a href="https://en.wikipedia.org/wiki/Doppler_effect#:~:text=The%20Doppler%20effect%20for%20electromagnetic%20waves%20such%20as,receding%20from%20us%3B%20that%20is%2C%20their%20radial%20velocities.">redshifting and blueshifting</a> on a regular interval, as the exoplanet 
+            | is pushing and pulling the star, changing its relative velocity to Earth.
+        img(src="../images/RadialVelocity.gif" alt="Radial Velocity Gif")
+        h3 Transit Photometry
+        p If an exoplanet's orbit happens to pass between Earth and the host star, the star's light is dimmed by a small amount. If this dip in brightness happens
+            | on a regular interval, then there is an exoplanet orbiting that star. As of writing, this method has led to more discoveries of exoplanets than any 
+            | other method.
+        img(src="../images/ExoplanetTransit.gif" alt="Exoplanet Transit gif")
+        img(src="../images/transit.jpeg" alt="Exoplanet Transit jpeg")
+    #projectInfo
+        h1 About this project
         p I created this website from the ground up starting in June.
-        p The site works by downloading a JSON with all the known exoplanet names from NASA, found at this link:
-        <a href='https://exoplanetarchive.ipac.caltech.edu/'> Exoplanet Archive </a>
-        p The program then parses the JSON and uploads it to MongoDB. This is done every five minutes or so.
+        p The site works by downloading a JSON with all the known exoplanet names from NASA, found at this link: <a href='https://exoplanetarchive.ipac.caltech.edu/'> Exoplanet Archive.</a> The program then parses the JSON and uploads it to MongoDB. This is done every five minutes or so. 
             | Every time you refresh the page, the program counts the number of Exoplanet objects in the database.
-            | In order to create this project, I had to learn 
+            | In order to create this project, I had to completely learn:
         ul
             li Node.js 
             li Express

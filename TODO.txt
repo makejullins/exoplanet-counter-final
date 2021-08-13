@@ -1,0 +1,11 @@
+1.
+    Change domain
+    Add icon
+
+2. Integrate CSS 
+
+3. Decide CSS theme
+
+Future
+    How many by each method
+    Graph of over time

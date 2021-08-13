@@ -1,8 +1,60 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
+        body {
+            /* Text */
+            padding: 50px;
+            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+            color: rgba(255, 255, 255, 0.747);
+            text-align: center;
+            /* Background */
+            background-color: rgba(22, 8, 48, 0.842);
+            background-image: url("../images/background1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        a {
+            color: #00B7FF;
+        }
+        
+        div {
+            border: 4mm ridge rgba(65, 126, 240, 0.6);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        header {
+            text-align: left;
+        }
+        
+        footer {
+            text-align: left;
+        }
+        
+        ul {
+            display: table;
+            margin: 0 auto;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #counterDisplay p {
+            font-size: 250%;
+        }
+        
+        #counterDisplay h1 {
+            font-size: 600%;
+        }
+        
+        #exoplanetInfo img {
+            max-width: 50%;
+        }
+        
+        #projectInfo ul {
+            text-align: left;
+        }
