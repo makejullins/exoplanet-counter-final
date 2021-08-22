@@ -8,14 +8,14 @@ block content
         h1 #{totalCount}
         p Exoplanets have been discovered. 
         h1 #{totalCount - 4438}
-        p Exoplanets have been discovered since this website went live on August 4th, 2021,
+        p Exoplanets have been discovered since this website went live #{years} years, #{months} months, and #{days} days ago.
     
     #exoplanetInfo
         h1 What is an exoplanet?
         h3 Exoplanets, or extrasolar planets are planets that have been detected <em>outside</em> of our solar system. 
         p The first exoplanets detected were two planets orbiting the pulsar 
             | PSR B1257+12 in 1990 by Aleksandr Wolszczan. In 1992, Aleksandr Wolszczan and Dale Frail published a paper named <a href='https://ui.adsabs.harvard.edu/abs/1992Natur.355..145W/abstract'> A planetary system around the millisecond pulsar PSR1257+12.</a>
-            | . In 1994, one more planet was discovered. As of writing, that planet is the smallest exoplanet observed, at about 2% of Earth's mass.
+            | detailing the discovery. In 1994, one more planet was discovered. As of writing, that planet is the smallest exoplanet observed, at about 2% of Earth's mass.
         h1 How are exoplanets found?
         h3 Radial Velocity Method 
         p Using the Radial Velocity Method, astronomers check if a nearby large planet is "wobbling" its parent star.
@@ -26,12 +26,12 @@ block content
         p If an exoplanet's orbit happens to pass between Earth and the host star, the star's light is dimmed by a small amount. If this dip in brightness happens
             | on a regular interval, then there is an exoplanet orbiting that star. As of writing, this method has led to more discoveries of exoplanets than any 
             | other method.
-        img(src="../images/ExoplanetTransit.gif" alt="Exoplanet Transit gif")
         img(src="../images/transit.jpeg" alt="Exoplanet Transit jpeg")
-    #projectInfo
+        img(src="../images/ExoplanetTransit.gif" alt="Exoplanet Transit gif")
+    #projectInfo 
         h1 About this project
-        p I created this website from the ground up starting in June.
-        p The site works by downloading a JSON with all the known exoplanet names from NASA, found at this link: <a href='https://exoplanetarchive.ipac.caltech.edu/'> Exoplanet Archive.</a> The program then parses the JSON and uploads it to MongoDB. This is done every five minutes or so. 
+        p I created this website from the ground up starting in June 2021.
+        p The site works by downloading a JSON with the names of all the known exoplanets from NASA, found at this link: <a href='https://exoplanetarchive.ipac.caltech.edu/'> Exoplanet Archive.</a> The program then parses the JSON and uploads it to MongoDB. This is done every five minutes or so. 
             | Every time you refresh the page, the program counts the number of Exoplanet objects in the database.
             | In order to create this project, I had to completely learn:
         ul
@@ -40,4 +40,4 @@ block content
             li MongoDB and Mongoose
             li Heroku
             li Pug
-        p As of August 9th 2021, the site is now fully available to the public.
+        p <i>As of August 9th 2021, the site is now fully available to the public.</i>

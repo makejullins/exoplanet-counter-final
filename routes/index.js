@@ -12,7 +12,17 @@ router.get("/", function(req, res, next) {
 router.get("/counter", exoController.index);
 
 router.get("/aboutme", function(req, res, next) {
-    res.render("aboutme");
+    res.render("aboutme", { title: "About Me" });
 });
+
+router.get("/exoplanetdef", function(req, res, next) {
+    res.render("exoplanetdef", { title: "About Exoplanets" })
+});
+
+router.get("/aboutproject", function(req, res, next) {
+    res.render("aboutproject", {
+        title: "About This Project"
+    });
+})
 
 module.exports = router;
